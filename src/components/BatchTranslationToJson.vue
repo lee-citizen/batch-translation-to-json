@@ -28,11 +28,12 @@
         <a href="#">{{ state.lastText }}</a>
       </template>
       <a-textarea
-      class="!min-h-82px"
-      v-model:value="state.text"
-      :placeholder="inputPlaceholder"
-      @focus="getFocus"
-    />
+        allowClear
+        class="!min-h-82px"
+        v-model:value="state.text"
+        :placeholder="inputPlaceholder"
+        @change="textareaChange"
+      />
   </a-card>
     <a-button mx-6 md:mx-0 my5 @click="onSearch" type="primary" :loading="loading">查询</a-button>
   </div>
@@ -47,7 +48,7 @@
     copyable
       :preview-mode="false"></json-viewer>
   </a-card>
-  <div mx-5 md:mx-0 space-x-4>
+  <div flex justify-center md:justify-start space-x-4>
   <a-button my5 type="primary" :disabled="!jsonData || btnTypeIndex == index" v-for="(item,index) in btnType" :key="index" @click="taggleGenetator(item.val,index)">{{item.name}}</a-button>
   </div>
   </div>
@@ -134,6 +135,16 @@ const searchChange = (e) =>{
 }
 const langChange = (e) =>{
 }
+const textareaChange = (e) => {
+  if (!state.text) {
+    jsonData.value = ''
+    
+    Object.keys(kwObj).map((key)=>{
+      delete kwObj[key]
+    })
+  }
+
+}
 
 // 初始化state
 const state = reactive(initState);
@@ -154,10 +165,6 @@ const info = () => {
 
 const loading=ref(false)
 onMounted(info)
-
-const getFocus = () => {
-  inputPlaceholder.value = "";
-};
 
 let kwObj = reactive({});
 
@@ -204,7 +211,6 @@ const btnType = [{
 
 const taggleGenetator = (type,index)=>{
   btnTypeIndex.value = index
-
   Object.assign(kwObj, {...getResultObj(kwObj,type)})
 }
 
