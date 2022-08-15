@@ -1,5 +1,5 @@
 # 批量翻译生成JSON
-![batch-translation-to-json](https://socialify.git.ci/lee-citizen/batch-translation-to-json/image?description=1&descriptionEditable=%E4%B8%80%E4%B8%AA%E5%9F%BA%E4%BA%8Evite%2Bvue3%E7%9A%84%E6%89%B9%E9%87%8F%E7%BF%BB%E8%AF%91%E7%94%9F%E6%88%90json%E5%B7%A5%E5%85%B7&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light)
+![batch-translation-to-json](https://socialify.git.ci/lee-citizen/batch-translation-to-json/image?description=1&descriptionEditable=%E4%B8%80%E4%B8%AA%E5%9F%BA%E4%BA%8Evite%2Bvue3%E7%9A%84%E6%89%B9%E9%87%8F%E7%BF%BB%E8%AF%91%E7%94%9F%E6%88%90json%E5%B7%A5%E5%85%B7&font=Inter&language=1&owner=1&pattern=Floating%20Cogs&stargazers=1&theme=Light)
 使用技术：
 - 框架：vue-next
 - 构建工具：vite
