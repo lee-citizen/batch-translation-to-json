@@ -34,7 +34,7 @@
       @focus="getFocus"
     />
   </a-card>
-    <a-button my5 @click="onSearch" type="primary" :loading="loading">查询</a-button>
+    <a-button mx-6 md:mx-0 my5 @click="onSearch" type="primary" :loading="loading">查询</a-button>
   </div>
   
   <div flex-1>
@@ -47,7 +47,7 @@
     copyable
       :preview-mode="false"></json-viewer>
   </a-card>
-  <div space-x-4>
+  <div mx-5 md:mx-0 space-x-4>
   <a-button my5 type="primary" :disabled="!jsonData || btnTypeIndex == index" v-for="(item,index) in btnType" :key="index" @click="taggleGenetator(item.val,index)">{{item.name}}</a-button>
   </div>
   </div>
