@@ -14,6 +14,10 @@
 ```
 npm run build
 ```
+# 效果
+
+- PC ![pc端](/img/demo1.jpg)
+- 移动 ![手机端](/img/demo2.jpg)
 ## 内部搭建配置（纯js）：
 修改src/config/index.js
 ```javascript
