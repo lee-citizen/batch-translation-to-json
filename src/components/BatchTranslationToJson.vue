@@ -1,5 +1,5 @@
 <template>
-  <h1 text-center>
+  <h1 text-center pt-30px>
     {{ titleName }}
   </h1>
   <div></div>
@@ -43,11 +43,13 @@
       </div>
     </div>
   </div>
+  <Footer></Footer>
 </template>
 
 <script setup>
 import pinyin from 'js-pinyin'
 // json格式化显示
+import Footer from './Footer.vue'
 import JsonViewer from 'vue-json-viewer'
 import { DownloadOutlined } from '@ant-design/icons-vue'
 import { Modal } from 'ant-design-vue'
